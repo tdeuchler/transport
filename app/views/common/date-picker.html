@@ -1,0 +1,21 @@
+
+<div class="date-picker">
+	<div class="selected" ng-class="showCalendar ? 'focus':''" ng-click="[setM(date.getMonth()),showCalendar = !showCalendar]">
+		<div class="mask">{{ date | date : 'MM/dd/yyyy'}}</div> <i class="fa fa-calendar"></i>
+	</div>
+	<div class="calendar" ng-class="showCalendar ? 'show' : ''">
+		<div class="left-control" ng-click="setMonth(calendarDate.getMonth() - 1)"><i class="fa fa-angle-left"></i></div>
+		<div class="month-display">{{month}} {{year}}</div>
+		<div class="right-control" ng-click="setMonth(calendarDate.getMonth() + 1)"><i class="fa fa-angle-right"></i></div>
+		<table>
+			<tr class="header">
+				<td ng-repeat="d in days">{{d}}</td>
+			</tr>
+
+			<tr ng-repeat="w in week">
+				<td ng-class="[d.day ? 'day':'', date.toString() == d.date.toString() ? 'selected-day':'']" ng-repeat="d in w" ng-click="d.day ? setDate(d):''">{{d.day}}</td>
+			</tr>
+
+		</table>
+	</div>
+</div>

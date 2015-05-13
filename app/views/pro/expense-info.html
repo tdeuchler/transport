@@ -1,0 +1,13 @@
+<div id="expense-info" class="section half">
+
+	<div class="header">
+		<div class="title">Expense Information <span style="float:right" ng-hide="expenseInfo.total == 0">Total: ({{expenseInfo.total | currency}})</span></div>
+	</div>
+
+	<div class="controls"><i class="fa fa-plus-square add" ng-click="expenseInfo.add()"></i> Add Expense</div>
+
+	<div>
+    	<div ui-grid="expenseInfo.gridOptions" class="expense-info-grid" ui-grid-resize-columns ui-grid-edit></div>
+	</div>
+
+</div>

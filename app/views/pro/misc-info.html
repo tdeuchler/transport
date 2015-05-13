@@ -1,0 +1,13 @@
+<div id="misc-info" class="section half">
+	<div class="header">
+		<div class="title">Misc. Information</div>
+	</div>
+	<div class="form">
+		<textarea ng-model="miscInfo.input" placeholder="Add misc. information here"/>		
+
+		<label>History</label>
+		<div class="notes">
+    		<div ng-repeat="note in miscInfo.notes"><span class="author">{{note.timeStamp | date:'MM/dd/yyyy h:mma'}} by {{note.author}}</span><br>{{note.note}}</div>
+		</div>
+	</form>
+</div>

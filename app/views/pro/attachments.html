@@ -1,0 +1,13 @@
+<div id="attachments" class="section half">
+	<div class="header">
+		<div class="title">Attachments</div>
+	</div>
+	<div class="controls"><i class="fa fa-plus-square add"></i> Add Attachments</div>
+	<div class="form">
+	
+		<label>Attachments</label>
+		<div class="notes">
+    		<div ng-repeat="a in attachments.attachments">{{$index + 1}}. <a href="{{a.file}}" target="_blank">{{a.file}}</a></div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,19 @@
+<div class="select" >
+	<div class="selected" ng-class="showOptions ? 'focus':''" ng-click="showOptions = !showOptions">
+		<div class="mask">{{selectedValue}}</div> <i class="fa fa-angle-down"></i>
+	</div>
+	<div class="options">
+		<ul ng-class="showOptions ? 'show' : ''" ng-mouseleave="showOptions = false" >
+			<li ng-repeat="option in options" ng-class="showOptions ? 'show' : ''" ng-click="selectValue(option.value)">{{option.value}}</li>
+		</ul>
+	</div>
+</div>
+
+
+			<!--
+			<li ng-class="showOptions ? 'show' : ''" ng-click="showOptions = !showOptions; selectValue('asdlfs;df;sdlk f;sl k;l ;lk ;l k;lkds;flks; lks;df ');">applefwi i ji fwoij ifjoiwjeof </li>
+			<li ng-class="showOptions ? 'show' : ''" ng-click="showOptions = !showOptions; selectValue('bsdfs dfsdfosk dpfoskdpfo pdos kp odsp ofspokf sdf');">b w ef efw fwef wefw efwef</li>
+			<li ng-class="showOptions ? 'show' : ''" ng-click="showOptions = !showOptions; selectValue('cosdkfp oskdfpoks pdofk po kfpdosk psokdfpo psd ofpsok fpso');">c wef wefw efwefw fwefwef</li>
+			<li ng-class="showOptions ? 'show' : ''" ng-click="showOptions = !showOptions; selectValue('asodkfp osdpfoksdpfok po kpo kps okp okp ok pos kposkdfp o');">a wef wefwefwef wefwef wef we</li>
+			<li ng-class="showOptions ? 'show' : ''" ng-click="showOptions = !showOptions; selectValue('boskdfpo kpo k pok pokspodf kposk po kposd kfpsodkfpos kdfpsodkfp oskpsdkfpsdo');">bwef  sdfsdf s s dfs df sdf s df sdf sdf sdf sdf sdf sd fs df sdf swefwefwefwefwefwef we wef w ef wef wefwefwe</li>
+			-->

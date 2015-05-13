@@ -1,0 +1,34 @@
+
+<div ng-controller="ProCtrl">
+
+  <section class="content">
+    <header ng-click="showMenu = !showMenu">{{pageTitle}}</header>
+
+  <div ng-show="showDetail">
+    
+      <div ng-include="'views/pro/pro-layout.html'"></div>
+      <footer>
+          <button class="cancel" ng-click="showModal = !showModal">Send Email</button>
+          <button class="cancel">Copy Pro</button>
+          <button class="submit">Save</button>
+          <button class="cancel">Close</button>
+      </footer>
+ 
+  </div>
+
+  <div ng-hide="showDetail" ng-click="showMenu = !showMenu">
+    <div ng-include="'views/pro/pro-search.html'"></div>
+  </div>
+   </section>
+  <!--
+    <menu ng-class="showMenu ? 'open' : ''">
+      <div this is my side menu
+    </menu>
+
+  <ng-modal ng-show="showModal"/>
+  -->
+
+</div>
+
+
+

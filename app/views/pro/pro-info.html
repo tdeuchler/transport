@@ -1,0 +1,76 @@
+<div class="section half">
+
+	<div class="header">
+		<div class="title">Pro Information</div>
+	</div>
+
+	<div class="form">
+						
+		<div class="half-left">
+			<label>Driver</label>
+			<input type="text" ng-model="proInfo.driver"/>
+		</div>
+		<div class="half-right">
+			<label>Phone</label>
+			<input type="text" ng-model="proInfo.phone"/>
+		</div>
+
+		<div class="half-left">
+			<label>Unit #</label>
+			<input type="text" ng-model="proInfo.unit"/>
+		</div>
+		<div class="half-right">
+			<label>TRL #</label>
+			<input type="text" ng-model="proInfo.trl"/>
+		</div>
+						
+		<div class="half-left">	
+			<label>Size</label>
+			<!--
+			<div class="select-style">
+				<select ng-init="proInfo.size = proInfo.size || proInfo.sizeOptions[0].value" ng-model="proInfo.size" ng-options="size.value as size.label for size in proInfo.sizeOptions"></select>
+			</div>
+			-->
+			<ng-select options="proInfo.options"/>
+		</div>
+
+
+		<div class="half-right">
+			<label>Size to EQ Type</label>
+			<ng-date-picker date="proInfo.date"/>
+		</div>
+
+		<div class="half-left">
+			<label>Ref #</label>
+			<input type="text" ng-model="proInfo.ref"/>
+		</div>
+		<div class="half-right">
+			<label>Given Miles</label>
+			<input type="text" ng-model="proInfo.miles"/>
+		</div>
+
+		<div class="half-left">
+			<label>Commodity</label>
+			<input type="text" ng-model="proInfo.commodity"/>
+		</div>
+		<div class="half-right">
+			<label>Weight</label>
+			<input type="text" ng-model="proInfo.weight"/>
+		</div>
+
+		<div class="half-left">
+			<label>Pcs</label>
+			<input type="text" ng-model="proInfo.pcs"/>
+		</div>
+		<div class="half-right">
+			<label>Seal #</label>
+			<input type="text" ng-model="proInfo.seal"/>
+		</div>
+
+		<div class="full">
+	<label>Load Status</label>
+	<input type="text" ng-model="proInfo.loadStatus"/>
+</div>
+				
+</div>
+</div>

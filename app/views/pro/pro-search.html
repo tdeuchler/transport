@@ -1,0 +1,27 @@
+
+<div ng-controller="ProSearchCtrl">
+	<div class="section full">
+		<div class="header">
+			<div class="title icon"><i class="fa fa-search"></i> Pro Search</div>
+		</div>
+		
+		<div class="form" ng-sumbit="search()">		
+			<div class="half-left">
+			<label>Search by</label>
+				<ng-select options="options"/>
+			</div>
+			<div class="half-right" >
+				<label>Find</label>
+				<input type="text" ng-model="searchString"/>
+			</div>
+		</div>
+	</div>
+
+	<div class="section full">
+		<div class="header">
+			<div class="title">Search Results</div>
+		</div>
+
+			    <div ui-grid="gridOptions" class="pro-search-grid" ui-grid-resize-columns></div>
+	</div>
+</div>
